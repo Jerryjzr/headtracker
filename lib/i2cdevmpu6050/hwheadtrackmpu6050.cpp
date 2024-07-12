@@ -1,11 +1,11 @@
 #include "hwheadtrackmpu6050.h"
 #include <MPU6050_6Axis_MotionApps_V6_12.h>
 
-#define INTERRUPT_PIN                 15 // use pin 15 on ESP8266
+#define INTERRUPT_PIN                 3 // use pin 15 on ESP8266
 
 volatile bool HWHeadTrackmpu6050_mpuInterrupt = false;
 
-void ICACHE_RAM_ATTR HWHeadTrackmpu6050_dmpDataReady() {
+void IRAM_ATTR HWHeadTrackmpu6050_dmpDataReady() {
     HWHeadTrackmpu6050_mpuInterrupt = true;
 }
 
