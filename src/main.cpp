@@ -330,7 +330,7 @@ void checkButton(){
 void setup() {
 
     WiFi.mode(WIFI_STA);
-    Serial.begin(115200);
+    Serial.begin（115200，SERIAL_8N1，SERIAL_TX_ONLY）;
     delay(250);
 
     Serial.println("\n Starting");
